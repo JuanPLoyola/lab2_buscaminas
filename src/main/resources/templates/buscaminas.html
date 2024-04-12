@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmls:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Buscaminas</title>
@@ -10,29 +10,30 @@
     <h1>STF Games:El juego de las minas explosivas</h1>
 </div>
 
-<form>
+<form th:object="${datos}">
     <div class="mb-3">
         <label  class="form-label">Numero de filas </label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="number" th:field="*{filas}">
     </div>
     <div class="mb-3">
         <label  class="form-label">Numero de Columas </label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="number" th:field="*{columnas}">
     </div>
     <div class="mb-3">
         <label  class="form-label">Numero de Intentos </label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="number" th:field="*{intentos}">
     </div>
     <div class="mb-3">
         <label  class="form-label">Numero de bombas </label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="number" th:field="*{bombas}">
     </div>
     <div class="mb-3">
         <label  class="form-label">Posiciones de las bombas </label>
-        <input type="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="text" th:field="*{posiciones}">
     </div>
-
+    <a href=jugar>
     <button type="submit" class="btn btn-primary">Submit</button>
+    </a>
 </form>
 
 </body>
