@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmls:th="http://www.thymeleaf.org"><head>
+<html lang="en" xmls:th="http://www.thymeleaf.org">
+<head>
     <meta charset="UTF-8">
     <title>Buscaminas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
 </head>
 <body>
 
@@ -9,11 +15,19 @@
     <h1>Encuentre todo el cobre apra ganar el juego</h1>
 </div>
 <div class="mb-3">
-    <label  class="form-label">coordenada a explotar de la mina </label>
-    <input type="" class="form-control" id="exampleInputEmail1" >
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <label  class="form-label">Coordenada para explotar la mina </label>
+    <input type="text" th:field="*{coordenada}">
+    <a>
+        <button type="button" class="btn btn-primary">enviar</button></a>
 </div>
+<table>
 
+    <tr th:each="datos:*{datos}">
+        <td th:text="${datos.filas}"></td>
+        <td th:text="${datos.columnas}"></td>
+        
+    </tr>
+</table>
 
 
 

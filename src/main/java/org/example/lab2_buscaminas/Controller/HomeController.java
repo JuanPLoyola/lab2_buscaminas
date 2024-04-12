@@ -10,4 +10,8 @@ public class HomeController{
         return "buscaminas";
     }
 
+    @RequestMapping(value = "/Jugar", method = RequestMethod.GET)
+    public String Jugar(){
+        return "Jugar";
+    }
 }
